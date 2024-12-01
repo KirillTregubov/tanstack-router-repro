@@ -13,6 +13,9 @@ function HomeComponent() {
   return (
     <MotionLink
       ref={linkRef}
-    />
+      to="/about"
+    >
+      Go to About
+    </MotionLink>
   )
 }
