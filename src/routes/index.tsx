@@ -1,14 +1,18 @@
 import * as React from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 
+import { MotionLink } from '../lib/motionlink'
+
 export const Route = createFileRoute('/')({
   component: HomeComponent,
 })
 
 function HomeComponent() {
+  const linkRef = React.useRef<HTMLAnchorElement>(null)
+
   return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
-    </div>
+    <MotionLink
+      ref={linkRef}
+    />
   )
 }
